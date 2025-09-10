@@ -1,0 +1,17 @@
+import * as dotenv from 'dotenv';
+dotenv.config();
+
+// Import logger
+import { logger } from './utils/logger.utils';
+
+import app from './app';
+
+const PORT = 8080;
+
+// Listen the application
+const server = app.listen(PORT, () => {
+  console.log('env variable is ', process.env.CTP_REGION)
+  logger.info(`⚡️ Service application listening on port ${PORT}`);
+});
+
+export default server;
