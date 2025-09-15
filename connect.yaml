@@ -1,7 +1,7 @@
 deployAs: 
   - name: retailconnectorservice
     applicationType: service
-    endpoint: /service
+    endpoint: /retailconnectorservice
     scripts:
       postDeploy: npm install && npm run build && npm run connector:post-deploy
       preUndeploy: npm install && npm run build && npm run connector:pre-undeploy
