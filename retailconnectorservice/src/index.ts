@@ -10,7 +10,7 @@ const PORT = 8080;
 
 // Listen the application
 const server = app.listen(PORT, () => {
-  console.log('env variable is ', process.env.CTP_REGION)
+  logger.info('env variable is ', process.env.CTP_REGION)
   logger.info(`⚡️ Service application listening on port ${PORT}`);
 });
 
